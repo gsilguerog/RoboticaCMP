@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Taller de Robótica | Inicio</title>
+  <title>Taller de Robótica | Práctica 06</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -91,7 +91,7 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Práctica 05<br>PWM</h2>
+              <h2>Práctica 06<br>Potenciómetro + PWM</h2>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@
           <ol>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="practicas.html">Prácticas</a></li>
-            <li>Práctica 05</li>
+            <li>Práctica 06</li>
           </ol>
         </div>
       </nav>
@@ -130,20 +130,27 @@
 
               <div class="content">
                 <h3>Introducción</h3>
-                <p>Práctica en la que aprenderemos a utilizar los pines PWM, regulando la intensidad de un diodo led..</p>
-                <p>Los pines PWM (Modulación de Ancho de Pulso, por sus siglas en inglés) en Arduino son pines que permiten generar señales PWM. La PWM es una técnica que se utiliza para controlar la cantidad de energía entregada a un dispositivo eléctrico, como un motor o un LED, mediante la variación del ancho de los pulsos de la señal..</p>
-                <div class="alert alert-primary" role="alert">
-                  <h4 class="alert-heading"><i class="bi bi-info-circle"></i> NOTA</h4>
-                  <p>Los pines PWM en las placas de Arduino más comunes, como el Arduino Uno, están marcados con el símbolo <b>"~"</b> cerca de su número de pin.</p>
-                </div>
+                <p>En esta práctica aprenderemos a controlar una salida de un pin PWM utilizando un potenciómetro</p>
                 
                 <h3>Instrucciones</h3>
                 <ol>
                   <li>Arma el circuito como se muestra en el layout</li>
                   <li>Descarga el Sketch y abrelo en el Arduino IDE</li>
                   <li>Verifica que el Sketch este correcto y cárgalo al Arduino UNO</li>
+                  <li>Abrir el monitor serial del IDE de Arduino para ver las lecturas del potenciómetro.</li>
                 </ol>
-                <iframe src=https://create.arduino.cc/editor/gsilguero/5916c4ba-c399-4367-84c8-83c431a3ad73/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                <div class="alert alert-danger" role="alert">
+                  <h5 class="alert-heading"><i class="bi bi-info-circle"></i> IMPORTANTE</h5>
+                  <b>NO</b> desconectar el cable USB de la computadora ni del Arduino.
+                </div>
+                <iframe src=https://create.arduino.cc/editor/gsilguero/361c5cb7-0bc3-4be2-b48b-2cc580c9b600/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+                <div class="alert alert-primary" role="alert">
+                  <h5 class="alert-heading"><i class="bi bi-info-circle"></i> NOTA</h5>
+                  <ul>
+                    <li>No es necesario inicializar las entradas analogicas con un pinMode</li>
+                    <li>La función <b>map()</b> nos permite "mapear" un valor que va dentro de un rango, a otro valor que está en otro rango, siempre y cuando el rango sea lineal.</li>
+                  </ul>
+                </div>
                 
 
               </div><!-- End post content -->
@@ -189,10 +196,11 @@
                 <h3 class="sidebar-title py-4">Materiales</h3>
                 <ul>
                   <li>1 x Arduino UNO</li>
+                  <li>1 x Potenciómetro</li>
                   <li>1 x Diodo LED</li>
                   <li>1 x Resistencia</li>
                   <li>1 x Protoboard</li>
-                  <li>2 x Cables Dupont M-M</li>
+                  <li>5 x Cables Dupont M-M</li>
                 </ul>
               </div><!-- End sidebar search formn-->
 
